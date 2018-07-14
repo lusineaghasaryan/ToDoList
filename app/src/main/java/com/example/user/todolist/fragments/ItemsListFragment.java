@@ -41,6 +41,7 @@ public class ItemsListFragment extends Fragment {
 
         @Override
         public void onTaskRemoved(int position) {
+            // Test
             mTaskListAdapter.removeTask(position);
         }
     };
