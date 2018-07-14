@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/margin_small"
+    android:elevation="4dp"
+    android:padding="@dimen/padding_small"
+    android:background="@drawable/custom_borders"
+    >
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/task_item_rv_selected"
+        app:layout_constraintLeft_toLeftOf="@id/task_item_rv_content"
+        />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/task_item_rv_content"
+        app:layout_constraintLeft_toRightOf="@id/task_item_rv_selected">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_delete"
+            android:id="@+id/id_remove"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/padding_small"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+        <TextView
+            android:id="@+id/task_item_rv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/id_remove"/>
+
+        <TextView
+            android:id="@+id/task_item_rv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/task_item_rv_title"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:id="@+id/task_item_rv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/task_item_rv_description"
+            android:textSize="@dimen/text_size_small"/>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
+
